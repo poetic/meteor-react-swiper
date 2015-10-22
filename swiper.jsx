@@ -4,14 +4,11 @@ SwiperComponent = React.createClass({
     styles: React.PropTypes.object
   },
 
-
   componentDidUpdate(){
-    console.log( "Update occurred" );
-    new Swiper(this.getDOMNode(),(this.props.options || {}));
+    console.error( "Swiper update not yet implemented.  Implement me!" );
   },
 
   componentDidMount(){
-    console.log( 'mounted' );
     new Swiper(this.getDOMNode(),(this.props.options || {}));
   },
 
