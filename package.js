@@ -11,7 +11,7 @@ Package.onUse(function(api) {
   api.use([
     'react@0.1.13',
     'jquery@1.11.4',
-    'lacosta:swiper@0.0.1'
+    'swiper:swiper@3.0.8'
   ]);
 
   api.add_files([
