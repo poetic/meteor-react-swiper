@@ -1,29 +1,37 @@
 SwiperComponent = React.createClass({
-  propTypes: {
-    options: React.PropTypes.object,
-    styles: React.PropTypes.object
+  getDefaultProps: function () {
+    return {
+      options:             {},
+      swiperIsInitialized: function () {},
+    }
   },
 
-  componentDidUpdate(){
-    console.error( "Swiper update not yet implemented.  Implement me!" );
+  propTypes: {
+    options:             React.PropTypes.object,
+    swiperIsInitialized: React.PropTypes.func.optional,
   },
 
   componentDidMount(){
-    new Swiper(this.getDOMNode(),(this.props.options || {}));
+    let {options, swiperIsInitialized} = this.props
+
+    let swiperInstance = new Swiper(this.getDOMNode(), options)
+    this.props.swiperIsInitialized(swiperInstance)
   },
 
   render(){
-    let children = React.Children.map( this.props.children, (c) => {
-      return <div className='swiper-slide'>{c}</div>;
-    });
-    let style = this.props.style;
+    let {options, swiperIsInitialized, ...other} = this.props
 
     return (
-      <div style={ style } className="swiper-container">
+      <div className="swiper-container" {...other}>
         <div className="swiper-wrapper">
-          {children}
+          {
+            React.Children.map(
+              children,
+              function (c) { return <div className='swiper-slide'>{c}</div> }
+            )
+          }
         </div>
       </div>
-    );
+    )
   }
-});
+})
