@@ -19,7 +19,7 @@ SwiperComponent = React.createClass({
   },
 
   render(){
-    let {options, swiperIsInitialized, ...other} = this.props
+    let {options, swiperIsInitialized, children, ...other} = this.props
 
     return (
       <div className="swiper-container" {...other}>
