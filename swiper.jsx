@@ -8,7 +8,7 @@ SwiperComponent = React.createClass({
 
   propTypes: {
     options:             React.PropTypes.object,
-    swiperIsInitialized: React.PropTypes.func.optional,
+    swiperIsInitialized: React.PropTypes.func,
   },
 
   componentDidMount(){
