@@ -11,8 +11,8 @@ ejson@1.0.7
 jquery@1.11.4
 jsx@0.2.1
 meteor@1.1.10
-nolimits4web:swiper@3.1.7
-poetic:react-swiper@0.0.6
+nolimits4web:swiper@3.2.6
+poetic:react-swiper@3.2.6
 promise@0.5.1
 random@1.0.5
 react@0.1.13

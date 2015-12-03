@@ -1,6 +1,6 @@
 Package.describe({
   name: 'poetic:react-swiper',
-  version: '0.0.7',
+  version: '3.2.6',
   summary: 'React-swipe npm package exposed on meteor client',
   documentation: 'README.md'
 });
@@ -11,7 +11,7 @@ Package.onUse(function(api) {
   api.use([
     'react@0.1.13',
     'jquery@1.11.4',
-    'nolimits4web:swiper@3.1.7'
+    'nolimits4web:swiper@3.2.6'
   ]);
 
   api.add_files([
