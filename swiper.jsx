@@ -14,7 +14,7 @@ SwiperComponent = React.createClass({
   componentDidMount(){
     let {options, swiperIsInitialized} = this.props
 
-    let swiperInstance = new Swiper(this.getDOMNode(), options)
+    let swiperInstance = new Swiper(React.findDOMNode(this), options)
     this.props.swiperIsInitialized(swiperInstance)
   },
 
