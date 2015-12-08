@@ -1,6 +1,6 @@
 Package.describe({
   name: 'poetic:react-swiper',
-  version: '3.2.7-rc.2',
+  version: '3.2.7-rc.3',
   summary: 'React-swipe npm package exposed on meteor client',
   documentation: 'README.md'
 });
