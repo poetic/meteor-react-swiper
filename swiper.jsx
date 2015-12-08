@@ -14,8 +14,16 @@ SwiperComponent = React.createClass({
   componentDidMount(){
     let {options, swiperIsInitialized} = this.props
 
-    let swiperInstance = new Swiper(ReactDOM.findDOMNode(this), options)
-    this.props.swiperIsInitialized(swiperInstance)
+    this.swiper = new Swiper(ReactDOM.findDOMNode(this), options)
+    this.props.swiperIsInitialized(this.swiper)
+  },
+
+  shouldComponentUpdate(nextProps, nextState){
+    if( _.isNumber(nextProps.activeIndex) ){
+      this.swiper.slideTo( nextProps.activeIndex )
+    }
+
+    return false;
   },
 
   render(){
