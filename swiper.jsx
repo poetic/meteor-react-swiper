@@ -23,7 +23,7 @@ SwiperComponent = React.createClass({
       this.swiper.slideTo( nextProps.activeIndex )
     }
 
-    return false;
+    return true;
   },
 
   render(){
