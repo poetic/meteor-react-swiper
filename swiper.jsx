@@ -19,6 +19,8 @@ SwiperComponent = React.createClass({
   },
 
   shouldComponentUpdate(nextProps, nextState){
+    this.swiper.update()
+
     if( _.isNumber(nextProps.activeIndex) ){
       this.swiper.slideTo( nextProps.activeIndex )
     }
